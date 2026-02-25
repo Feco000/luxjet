@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulátor | LuxJet</title>
+    <link rel="stylesheet" href="bbj.css">
+</head>
+<body>
+
+<div id="cursor-plane-container">
+    <svg class="cursor-plane-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21,16V14L13,9V3.5C13,2.67 12.33,2 11.5,2C10.67,2 10,2.67 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z" />
+    </svg>
+</div>
+<div id="wind-particles-container"></div>
+    <nav id="navbar">
+        <div class="logo">LUXJET</div>
+        <ul>
+            <li><a href="charter.html" class="tab-link">Kezdőlap</a></li>
+            <li><a href="gepek.html" class="tab-link">Flotta</a></li>
+            <li><a href="destinations.html" class="tab-link">Célállomások</a></li>
+            <li><a href="kalkulator.html" class="tab-link active">Kalkulátor</a></li>
+            <li><a href="rolunk.html" class="tab-link">Rólunk</a></li>
+        </ul>
+    </nav>
+
+    <section class="details-section">
+        <h1 class="fade-in">Jetkalkulátor</h1>
+        
+        <div class="calculator-container slide-up">
+            <form id="calcForm" class="booking-form">
+                <div class="input-group">
+                    <input type="number" id="pax" min="1" max="18" required>
+                    <label>Utasok száma (1-18 fő)</label>
+                </div>
+                <div class="input-group">
+                    <input type="number" id="hours" min="0.5" max="18" step="0.5" required>
+                    <label>Tervezett repülési idő (óra)</label>
+                </div>
+                <button class="alma" type="submit" id="submitBtn">
+                    <span class="btn-text">Számítás</span>
+                </button>
+            </form>
+        </div>
+
+        <div id="calcResults" class="hidden" style="margin-top: 60px;"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 LuxJet Aviation. Minden jog fenntartva.</p>
+    </footer>
+
+    <script src="bbj.js"></script>
+</body>
+</html>
